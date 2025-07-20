@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="projects.css" />
+</head>
+<body>
+    
+<nav class="navbar">
+  <div class="logo">Dave Racho</div>
+  <div class="nav-center">
+    <ul class="nav-links">
+      <li><a href="main.html">Home</a></li>
+      <li><a href="blogs.html">Blogs</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="aboutme.html">About Me</a></li>
+      <li><a href="contacts.html">Contacts</a></li>
+    </ul>
+  </div>
+</nav>
+  
+<section class="services-section">
+  <h4 class="section-subtitle">My Services</h4>
+  
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="icon">📋</div>
+      <h3>RESTful API Development</h3>
+      <p>Design and build secure, scalable APIs to connect front-end applications with databases and services.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="icon">📖</div>
+      <h3>Database Design & Optimizatio</h3>
+      <p>Plan relational (SQL) or non-relational (NoSQL) databases, write efficient queries, and optimize performance.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="icon">📺</div>
+      <h3>Authentication & Authorization Systems</h3>
+      <p>Implement secure login systems, role-based access control, and token-based auth (e.g., JWT, OAuth2).</p>
+    </div>
+
+    <div class="service-card">
+      <div class="icon">💬</div>
+      <h3>Cloud Integration & Deployment</h3>
+      <p>Deploy backend services to cloud platforms (like AWS, Heroku, or DigitalOcean) with CI/CD pipelines.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="icon">📶</div>
+      <h3>Server-Side Logic for Web & Mobile Apps</h3>
+      <p>Power complex features like notifications, payment processing, and data analytics behind the scenes.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="icon">❄️</div>
+      <h3>Microservices & Scalable Architecture</h3>
+      <p>Break down monolithic apps into independent services to improve scalability and maintainability.</p>
+    </div>
+  </div>
+</section>
+
+<script>
+  const currentPage = window.location.pathname.split("/").pop();
+  const navLinks = document.querySelectorAll(".nav-links a");
+
+  navLinks.forEach(link => {
+    const href = link.getAttribute("href");
+    if (href === currentPage) {
+      link.classList.add("active");
+    }
+  });
+  </script>
+
+</body>
+</html>

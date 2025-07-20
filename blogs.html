@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="blogs.css" />
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="logo">Dabimaru</div>
+  <div class="nav-center">
+    <ul class="nav-links">
+      <li><a href="main.html">Home</a></li>
+      <li><a href="blogs.html">Blogs</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="aboutme.html">About Me</a></li>
+      <li><a href="contacts.html">Contacts</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="blog-grid">
+  <div class="blog-card">
+    <div class="image-container">
+      <img src="laptop.png" alt="Webflow">
+      <span class="label">Why?</span>
+    </div>
+    <div class="card-content">
+      <h3>Why I choose the IT career</h3>
+      <p>I chose an IT career because I enjoy solving complex problems and building innovative solutions through technology.</p>
+    </div>
+  </div>
+
+  <div class="blog-card">
+    <div class="image-container">
+      <img src="database.png" alt="WordPress">
+      <span class="label">What?</span>
+    </div>
+    <div class="card-content">
+      <h3>What field did I choose?</h3>
+      <p>I chose to become a back-end developer because I enjoy working with data, logic, and building the core systems that power applications behind the scenes.</p>
+    </div>
+  </div>
+
+
+<script>
+  const currentPage = window.location.pathname.split("/").pop();
+  const navLinks = document.querySelectorAll(".nav-links a");
+
+  navLinks.forEach(link => {
+    const href = link.getAttribute("href");
+    if (href === currentPage) {
+      link.classList.add("active");
+    }
+  });
+</script>
+
+    
+</body>
+</html>

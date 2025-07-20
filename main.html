@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css" />
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="logo">Dabimaru</div>
+  <div class="nav-center">
+    <ul class="nav-links">
+      <li><a href="main.html">Home</a></li>
+      <li><a href="blogs.html">Blogs</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="aboutme.html">About Me</a></li>
+      <li><a href="contacts.html">Contacts</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="homep">
+    <div class="homep-text">
+      <p>Hello there!</p>
+      <h1>I'm <span>Dave</span> Racho</h1>
+      <h1> <span> Backend </span>Developer</h1>
+      <p class="subtext">
+        A professional Background developer with a strong passion for creating and building a reliable
+        and efficient server clients website. Thoughtfully solving complex problems tht ensures data flow.
+
+      </p>
+    </div>
+    <div class="homep-img">
+      <img src="me.png" alt="Profile Image" />
+    </div>
+  </section>
+
+<script>
+  const currentPage = window.location.pathname.split("/").pop();
+  const navLinks = document.querySelectorAll(".nav-links a");
+
+  navLinks.forEach(link => {
+    const href = link.getAttribute("href");
+    if (href === currentPage) {
+      link.classList.add("active");
+    }
+  });
+</script>
+
+    
+</body>
+</html>

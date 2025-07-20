@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="aboutme.css" />
+</head>
+<body>
+    
+<nav class="navbar">
+  <div class="logo">Dave Racho</div>
+  <div class="nav-center">
+    <ul class="nav-links">
+      <li><a href="main.html">Home</a></li>
+      <li><a href="blogs.html">Blogs</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="aboutme.html">About Me</a></li>
+      <li><a href="contacts.html">Contacts</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="about-me">
+  <div class="about-img">
+    <img src="profile.png" alt="Profile Photo" />
+  </div>
+  <div class="about-content">
+    <h2>Hello, I Am <span>Dave Racho</span></h2>
+    <p>
+      I am a passionate backend developer with a strong foundation in server-side technologies.
+      My goal is to create efficient, scalable, and secure backend systems that power modern web and mobile apps.
+    </p>
+
+    <div class="about-info">
+      <p><strong>Skills:</strong> Node.js, Express, Python, Java, SQL, REST APIs</p>
+      <p><strong>Experience:</strong> 3+ years in backend development with startups and freelance projects</p>
+      <p><strong>Education:</strong>Bachelor Of Science In Information Technology, Cavite States University</p>
+      <p><strong>Hobby:</strong> Solving algorithm problems, reading tech blogs, programming, reading books, watching, playing games</p>
+    </div>
+
+    <a href="contacts.html" class="btn">Contact me</a>
+  </div>
+</section>
+
+<script>
+  const currentPage = window.location.pathname.split("/").pop();
+  const navLinks = document.querySelectorAll(".nav-links a");
+
+  navLinks.forEach(link => {
+    const href = link.getAttribute("href");
+    if (href === currentPage) {
+      link.classList.add("active");
+    }
+  });
+  </script>
+    
+</body>
+</html>

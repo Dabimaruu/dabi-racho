@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <link rel="stylesheet" href="contacts.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    
+<nav class="navbar">
+  <div class="logo">Dave Racho</div>
+  <div class="nav-center">
+    <ul class="nav-links">
+      <li><a href="main.html">Home</a></li>
+      <li><a href="blogs.html">Blogs</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="aboutme.html">About Me</a></li>
+      <li><a href="contacts.html">Contacts</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="contact-section" id="contact">
+  <h2>Contact us</h2>
+  <p class="contact-subtext">
+    Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor incididunt utolme.
+  </p>
+
+  <div class="contact-container">
+    <form class="contact-form">
+      <div class="form-row">
+        <div class="form-group">
+          <label>Name</label>
+          <input type="text" placeholder="Ex. Dave Racho" />
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" placeholder="example@gmail.com" />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Phone</label>
+          <input type="text" placeholder="+63 9771830423" />
+        </div>
+        <div class="form-group">
+          <label>Subject</label>
+          <input type="text" placeholder="Partnership" />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Leave us a message</label>
+        <textarea placeholder="Please type your message here..."></textarea>
+      </div>
+
+      <button type="submit" class="send-btn">Send message</button>
+    </form>
+
+    <div class="contact-info">
+      <h3>Contact details</h3>
+      <p>Contact me for a good service I can provide for you.</p>
+
+      <div class="info-pair">
+        <strong>Email</strong>
+        <span class="highlight">dabidave004@gmail.com</span>
+      </div>
+      <div class="info-pair">
+        <strong>Phone</strong>
+        <span class="highlight">+63 9851629781</span>
+      </div>
+
+      <hr />
+
+      <h3>Follow us on social media</h3>
+      <p>Blandit aliquam etiam erat velit scelerisque in auctor urna nunc id cursus metus.</p>
+
+      <div class="social-icons">
+         <a href="https://github.com/Dabimaruu" target="_blank">
+           <i class="fab fa-github"></i>
+        </a>
+
+        <a href="https://facebook.com/dave.racho.7" target="_blank">
+          <i class="fab fa-facebook"></i>
+        </a>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<script>
+  const currentPage = window.location.pathname.split("/").pop();
+  const navLinks = document.querySelectorAll(".nav-links a");
+
+  navLinks.forEach(link => {
+    const href = link.getAttribute("href");
+    if (href === currentPage) {
+      link.classList.add("active");
+    }
+  });
+  </script>
+    
+</body>
+</html> 
